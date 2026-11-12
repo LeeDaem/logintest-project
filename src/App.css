@@ -1,0 +1,142 @@
+/* ===== 공통 ===== */
+body {
+  margin: 0;
+  background: #f3f4f6;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #111827;
+}
+
+/* ===== 로그인 ===== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 340px;
+  padding: 40px 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.card h1 { margin: 0 0 8px; font-size: 26px; }
+.desc { margin: 0 0 28px; color: #6b7280; font-size: 14px; }
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn.google {
+  background: #fff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+.btn.google:hover { background: #f9fafb; }
+.btn.google:disabled { opacity: 0.6; cursor: default; }
+
+.error { margin-top: 16px; color: #dc2626; font-size: 13px; }
+
+/* ===== 홈 ===== */
+.home { min-height: 100vh; }
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand { font-size: 20px; font-weight: 700; color: #4f46e5; }
+
+.header-right { display: flex; align-items: center; gap: 12px; }
+.header-name { font-size: 14px; font-weight: 500; }
+
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 13px;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-sm:hover { background: #1f2937; }
+
+.home-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.welcome {
+  padding: 32px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  border-radius: 16px;
+}
+.welcome h1 { margin: 0 0 8px; font-size: 26px; }
+.welcome p { margin: 0; opacity: 0.9; font-size: 15px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.stat-card {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.stat-value { font-size: 30px; font-weight: 700; color: #4f46e5; }
+.stat-label { margin-top: 4px; font-size: 13px; color: #6b7280; }
+
+.info-card {
+  padding: 28px 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.info-card h2 { margin: 0 0 16px; font-size: 18px; }
+.info-card dl { margin: 0; }
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+}
+.row:last-child { border-bottom: none; }
+.row dt { color: #6b7280; }
+.row dd { margin: 0; font-weight: 500; }
+
+@media (max-width: 600px) {
+  .stats { grid-template-columns: 1fr; }
+  .header-name { display: none; }
+}
