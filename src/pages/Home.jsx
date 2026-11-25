@@ -1,4 +1,8 @@
+import { Link } from 'react-router-dom'
+
 function Home({ user, onLogout }) {
+  const displayName = user.nickname || user.name
+
   const stats = [
     { label: '오늘 방문', value: '1' },
     { label: '내 게시글', value: '0' },
@@ -16,14 +20,15 @@ function Home({ user, onLogout }) {
             alt="프로필"
             referrerPolicy="no-referrer"
           />
-          <span className="header-name">{user.name}</span>
+          <span className="header-name">{displayName}</span>
+          <Link to="/mypage">마이페이지</Link>
           <button className="btn-sm" onClick={onLogout}>로그아웃</button>
         </div>
       </header>
 
       <main className="home-main">
         <section className="welcome">
-          <h1>안녕하세요, {user.name}님 👋</h1>
+          <h1>안녕하세요, {displayName}님 👋</h1>
           <p>구글 계정으로 로그인에 성공했어요. 이곳에서 서비스를 시작해 보세요.</p>
         </section>
 
